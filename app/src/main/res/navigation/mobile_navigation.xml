@@ -6,12 +6,12 @@
     app:startDestination="@id/rgsLlegadaFragment">
     <fragment
         android:id="@+id/rgsLlegadaFragment"
-        android:name="com.example.msk2.RgsLlegadaFragment"
+        android:name="com.example.msk2.view.fragments.RgsLlegadaFragment"
         android:label="@string/valtitulorgsllegada"
         tools:layout="@layout/fragment_rgs_llegada" />
     <fragment
         android:id="@+id/rsSemanalFragment"
-        android:name="com.example.msk2.RsSemanalFragment"
+        android:name="com.example.msk2.view.fragments.RsSemanalFragment"
         android:label="@string/valtitulorssemanal"
         tools:layout="@layout/fragment_rs_semanal" />
 </navigation>
