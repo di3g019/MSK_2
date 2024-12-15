@@ -15,4 +15,23 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="valtitulorgsllegada">REGISTRAR_LLEGADA</string>
     <string name="valtitulorssemanal">RESUMEN_SEMANAL</string>
+
+    <string name="valtitulo">Ingreso estibas</string>
+    <string name="valetusuario">Ingrese su DNI/CE</string>
+    <string name="valetpassword">Ingrese su contraseña</string>
+    <string name="valbtnlogin">INGRESAR</string>
+    <string name="valbtnregistrar">REGÍSTRATE</string>
+    <string name="valchkguardardatos">Recordar</string>
+    <string name="msguspassword">Ingrese DNI y contraseña</string>
+    <string name="action_cerrar">Cerrar sesión</string>
+    <string name="tvtituloregistro">REGISTRARME</string>
+    <string name="valetnombre">Ingrese su nombre</string>
+    <string name="valetapellido">Ingrese su apellido</string>
+    <string name="valetedad">Ingrese su edad</string>
+    <string name="valetnumero">Ingrese su N° de telefono</string>
+    <string name="valetusureg">Ingrese su DNI/CE</string>
+    <string name="valetpassreg">Ingrese su contraseña</string>
+    <string name="valetrepassreg">Vuelva a ingresar su contraseña</string>
+    <string name="valbtnregistrarse">REGISTRARSE</string>
+    <string name="valbtnirlogin">REGRESAR AL LOGIN</string>
 </resources>

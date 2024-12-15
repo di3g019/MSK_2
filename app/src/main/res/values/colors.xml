@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Nuevos colores -->
+
+    <color name="color_secundario">#1A1BA6</color>
+    <color name="color_gris_500">#9E9E9E</color>
+    <color name="snackbarerror">#EF0000</color>
 </resources>
