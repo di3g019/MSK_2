@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">MSK2</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="valtitulorgsllegada">REGISTRAR_LLEGADA</string>
+    <string name="valtitulorssemanal">RESUMEN_SEMANAL</string>
+
+    <string name="valtitulo">Ingreso estibas</string>
+    <string name="valetusuario">Ingrese su DNI/CE</string>
+    <string name="valetpassword">Ingrese su contraseña</string>
+    <string name="valbtnlogin">INGRESAR</string>
+    <string name="valbtnregistrar">REGÍSTRATE</string>
+    <string name="valchkguardardatos">Recordar</string>
+    <string name="msguspassword">Ingrese DNI y contraseña</string>
+    <string name="action_cerrar">Cerrar sesión</string>
+    <string name="tvtituloregistro">REGISTRARME</string>
+    <string name="valetnombre">Ingrese su nombre</string>
+    <string name="valetapellido">Ingrese su apellido</string>
+    <string name="valetedad">Ingrese su edad</string>
+    <string name="valetnumero">Ingrese su N° de telefono</string>
+    <string name="valetusureg">Ingrese su DNI/CE</string>
+    <string name="valetpassreg">Ingrese su contraseña</string>
+    <string name="valetrepassreg">Vuelva a ingresar su contraseña</string>
+    <string name="valbtnregistrarse">REGISTRARSE</string>
+    <string name="valbtnirlogin">REGRESAR AL LOGIN</string>
+</resources>
