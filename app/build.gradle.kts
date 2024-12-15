@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.org.jetbrains.kotlin.kapt)
 }
 
 android {
@@ -60,5 +60,5 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.runtime.livedata)
-    ksp(libs.androidx.room.compiler.v250)
+    kapt(libs.androidx.room.compiler)
 }

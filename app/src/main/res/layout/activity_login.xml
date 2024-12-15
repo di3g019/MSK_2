@@ -55,9 +55,11 @@
             android:layout_marginTop="150dp">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/valetpassword" />
+                android:hint="@string/valetpassword"
+                android:inputType="text|textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
