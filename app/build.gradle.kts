@@ -60,5 +60,6 @@ dependencies {
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.runtime.livedata)
+    implementation(libs.circleimageview)
     kapt(libs.androidx.room.compiler)
 }

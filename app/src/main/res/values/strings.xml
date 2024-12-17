@@ -24,7 +24,7 @@
     <string name="valchkguardardatos">Recordar</string>
     <string name="msguspassword">Ingrese DNI y contraseña</string>
     <string name="action_cerrar">Cerrar sesión</string>
-    <string name="tvtituloregistro">REGISTRARME</string>
+    <string name="tvtituloregistro">REGÍSTRATE</string>
     <string name="valetnombre">Ingrese su nombre</string>
     <string name="valetapellido">Ingrese su apellido</string>
     <string name="valetedad">Ingrese su edad</string>
@@ -34,4 +34,8 @@
     <string name="valetrepassreg">Vuelva a ingresar su contraseña</string>
     <string name="valbtnregistrarse">REGISTRARSE</string>
     <string name="valbtnirlogin">REGRESAR AL LOGIN</string>
+    <string name="documentoDNI">DNI</string>
+    <string name="tipoDocumentoCI">CARNET EXTRANJERIA</string>
+    <string name="TXT">Tipo de Documento</string>
+    <string name="IngresoEstibaTitulo">Ingreso de Estibas</string>
 </resources>

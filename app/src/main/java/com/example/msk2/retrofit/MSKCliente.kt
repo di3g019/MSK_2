@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object MSKCliente {
 
     private fun buildRetrofit() = Retrofit.Builder()
-        .baseUrl("http://localhost:8080/wsmskestiba/")
+        .baseUrl("http://192.168.18.43:8080/wsmskestiba/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

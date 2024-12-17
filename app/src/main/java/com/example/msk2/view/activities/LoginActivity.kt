@@ -7,9 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.msk2.R
 import com.example.msk2.databinding.ActivityLoginBinding
+import com.example.msk2.retrofit.response.ResponseLogin
+import com.example.msk2.utilitarios.AppMensaje
+import com.example.msk2.utilitarios.TipoMensaje
 import com.example.msk2.viewmodel.AuthViewModel
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
@@ -29,7 +33,21 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnlogin.setOnClickListener(this)
         binding.btnregistrar.setOnClickListener(this)
 
-        authViewModel.autenticarEstiba(binding.etusuario.text.toString(), binding.etpassword.text.toString())
+        authViewModel.responseLogin.observe(
+            this, Observer {
+                response -> obtenerDatosLogin(response)
+            }
+        )
+    }
+
+    private fun obtenerDatosLogin(responseLogin: ResponseLogin) {
+        if (responseLogin.success){
+            startActivity(Intent(applicationContext, HomeActivity::class.java))
+        }else {
+            AppMensaje.mensaje(binding.root, responseLogin.mensaje, TipoMensaje.ERROR)
+        }
+        binding.btnlogin.isEnabled = true
+        binding.btnregistrar.isEnabled = true
     }
 
     override fun onClick(p0: View) {
@@ -40,7 +58,18 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun autenticarEstiba() {
-        TODO("Not yet implemented")
+        binding.btnregistrar.isEnabled = false
+        binding.btnlogin.isEnabled = false
+        if (validarUsuarioPassword()){
+            authViewModel.autenticarEstiba(
+                binding.etusuario.text.toString(),
+                binding.etpassword.text.toString()
+            )
+        }else{
+            AppMensaje.mensaje(binding.root, "Ingrese N° de documento y/o contraseña", TipoMensaje.ERROR)
+            binding.btnregistrar.isEnabled = true
+            binding.btnlogin.isEnabled = true
+        }
     }
 
     private fun validarUsuarioPassword():Boolean{
