@@ -35,8 +35,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         authViewModel.responseLogin.observe(
             this, Observer {
-                response -> obtenerDatosLogin(response)
-            }
+                response -> response?.let {
+                    obtenerDatosLogin(it)
+            } ?: run{
+                AppMensaje.mensaje(binding.root, "No se encontraron tus credenciales. Vuelve a intentar.", TipoMensaje.ERROR)
+                binding.btnlogin.isEnabled = true
+                binding.btnregistrar.isEnabled = true
+            } }
         )
     }
 

@@ -12,26 +12,22 @@ class AuthViewModel : ViewModel(){
     var responseLogin: LiveData<ResponseLogin>
     var responseRegistro : LiveData<ResponseRegistro>
     private var authRepository = AuthRepository()
-
     init {
         responseLogin = authRepository.loginResponse
         responseRegistro = authRepository.registroResponse
     }
-
     fun autenticarEstiba(nrodocumento:String, contrasenia:String){
-        responseLogin = authRepository.autenticarEstiba(RequestLogin(nrodocumento,contrasenia))
+         authRepository.autenticarEstiba(RequestLogin(nrodocumento,contrasenia))
     }
-
     fun registrarEstiba(documento:Boolean,
                         nrodocumento: String,
                         contrasenia:String,
                         nombre:String,
                         apellido:String,
                         edad:Int,
-                        telefono:String){
+                        telefono:String) {
         responseRegistro = authRepository.registrarEstiba(
-            RequestRegistro(documento, nrodocumento, contrasenia, nombre, apellido, edad,telefono)
+            RequestRegistro(documento, nrodocumento, contrasenia, nombre, apellido, edad, telefono)
         )
     }
-
 }
