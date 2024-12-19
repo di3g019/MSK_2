@@ -3,6 +3,7 @@ package com.example.msk2.retrofit
 import com.example.msk2.retrofit.request.RequestLogin
 import com.example.msk2.retrofit.request.RequestRegistro
 import com.example.msk2.retrofit.response.ResponseLogin
+import com.example.msk2.retrofit.response.ResponseProgramacion
 import com.example.msk2.retrofit.response.ResponseRegistro
 import retrofit2.Call
 import retrofit2.http.Body
@@ -21,6 +22,7 @@ interface MSKService {
     fun crearEstiba(@Body registro:RequestRegistro):
             Call<ResponseRegistro>
 
-    @GET("")
-    fun listarProgramacionPorDocumento()
+    @GET("programacion/programacion-estiba/{nrodocumento}")
+    fun listarProgramacionPorDocumento(@Path("nrodocumento") nrodocumento:String ):
+            Call<List<ResponseProgramacion>>
 }

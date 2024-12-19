@@ -38,4 +38,13 @@
     <string name="tipoDocumentoCI">CARNET EXTRANJERIA</string>
     <string name="TXT">Tipo de Documento</string>
     <string name="IngresoEstibaTitulo">Ingreso de Estibas</string>
+    <string name="menuprueba">Listado de programaciones</string>
+    <string name="SubtituloTusProgramacions">Tus programaciones:</string>
+    <string name="Cuenta">Cuenta:</string>
+    <string name="Lugar">Lugar:</string>
+    <string name="HoraInicio">Hora Inicio:</string>
+    <string name="HoraFin">Hora Fin:</string>
+    <string name="btnRegistra">¡Registra tu llegada al servicio!</string>
+    <string name="Adicionales">Adicionales del Servicio</string>
+    <string name="CalculoQuincena">Calculo de Quincena</string>
 </resources>

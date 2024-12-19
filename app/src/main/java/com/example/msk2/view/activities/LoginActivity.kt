@@ -11,16 +11,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.msk2.R
 import com.example.msk2.databinding.ActivityLoginBinding
+import com.example.msk2.db.entity.EstibaEntity
 import com.example.msk2.retrofit.response.ResponseLogin
 import com.example.msk2.utilitarios.AppMensaje
 import com.example.msk2.utilitarios.TipoMensaje
 import com.example.msk2.viewmodel.AuthViewModel
+import com.example.msk2.viewmodel.EstibaViewModel
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
 
     private lateinit var binding: ActivityLoginBinding
     private lateinit var authViewModel: AuthViewModel
+
+    private lateinit var estibaViewModel: EstibaViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +33,9 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         authViewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
+
+        estibaViewModel = ViewModelProvider(this).get(EstibaViewModel::class.java)
+        estibaViewModel.eliminar()
 
         binding.btnlogin.setOnClickListener(this)
         binding.btnregistrar.setOnClickListener(this)
@@ -47,7 +54,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun obtenerDatosLogin(responseLogin: ResponseLogin) {
         if (responseLogin.success){
-            startActivity(Intent(applicationContext, HomeActivity::class.java))
+            val estibaEntity = EstibaEntity(
+                responseLogin.idestiba?.toInt(),
+                responseLogin.documento,
+                responseLogin.nrodocumento.toString(),
+                responseLogin.nombre.toString(),
+                responseLogin.apellido.toString(),
+                responseLogin.edad?.toInt(),
+                responseLogin.telefono.toString())
+            estibaViewModel.insertar(estibaEntity)
+            startActivity(Intent(applicationContext, MainActivity::class.java))
         }else {
             AppMensaje.mensaje(binding.root, responseLogin.mensaje, TipoMensaje.ERROR)
         }

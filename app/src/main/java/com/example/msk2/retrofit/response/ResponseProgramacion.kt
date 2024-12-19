@@ -7,9 +7,10 @@ import java.util.Date
 data class ResponseProgramacion(
     var idprogramacion:String,
     var fecha:Date,
+    var cuenta:String,
     var lugar:String,
     var coordenada:String,
-    var hora:Time,
+    var hora:String,
     var tipocontenedor:String,
     var cantidadcontenedores:Int,
     var productos:String,
